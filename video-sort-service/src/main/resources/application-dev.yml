@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:db_video_sorting;DB_CLOSE_DELAY=-1
+    username: video_sorting
+    password: video_sorting
+  sql:
+    init:
+      schema-locations: classpath:schema.sql
+      mode: always
+      continue-on-error: true
+  h2:
+    console:
+      enabled: true
+      settings:
+        trace: true
+      path: /h2-console
+
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+app-config:
+  thumbnail-storage-dir: D:/Workspace/PROJECT_DEVELOPMENT_DATA/video-sort-tool/video-sort-service/thumbnail
