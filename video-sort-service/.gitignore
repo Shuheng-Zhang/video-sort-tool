@@ -4,7 +4,7 @@ target/
 !**/src/main/**/target/
 !**/src/test/**/target/
 
-!**/src/main/resources/rebel.xml
+!/src/main/resources/rebel.xml
 
 ### STS ###
 .apt_generated
